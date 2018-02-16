@@ -29,17 +29,17 @@ namespace parameters {
   const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 30;
 
   // MONEY_SUPPLY - total number coins to be generated
-  const uint64_t MONEY_SUPPLY                                  = UINT64_C(1000000000000000000);
+  const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000000000000);
   const uint32_t MANDATORY_TRANSACTION                         = 0;
   const uint32_t KILL_HEIGHT                                   = 0;
   const uint64_t TAIL_EMISSION_REWARD                          = 0;
   const size_t CRYPTONOTE_COIN_VERSION                         = 0;
   const bool ZAWY_DIFFICULTY_V2                          	     = 0;
-  const unsigned EMISSION_SPEED_FACTOR                         = 18;
-  const uint64_t GENESIS_BLOCK_REWARD                          = 60000000000000000;
+  const unsigned EMISSION_SPEED_FACTOR                         = 1;
+  const uint64_t GENESIS_BLOCK_REWARD                          = 1;
   static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
-  const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 10000000000000;
+  const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
   const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
   const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
   const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
@@ -53,7 +53,7 @@ namespace parameters {
   const uint64_t MAX_TRANSACTION_SIZE_LIMIT                    = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE * 125 / 100 - CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE;
   const uint64_t DEFAULT_FEE                                   = MINIMUM_FEE;
 
-  const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
+  const uint64_t DIFFICULTY_TARGET                             = 120; // seconds
   const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
   const size_t   DIFFICULTY_WINDOW                             = 50; // blocks
   const size_t   DIFFICULTY_CUT                                = 5;  // timestamps to cut after sorting
