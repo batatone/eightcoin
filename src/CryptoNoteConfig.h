@@ -29,31 +29,31 @@ namespace parameters {
   const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 30;
 
   // MONEY_SUPPLY - total number coins to be generated
-  const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000000000000);
+  const uint64_t MONEY_SUPPLY                                  = UINT64_C(1000000000000000000);
   const uint32_t MANDATORY_TRANSACTION                         = 0;
   const uint32_t KILL_HEIGHT                                   = 0;
   const uint64_t TAIL_EMISSION_REWARD                          = 0;
   const size_t CRYPTONOTE_COIN_VERSION                         = 0;
   const bool ZAWY_DIFFICULTY_V2                          	     = 0;
   const unsigned EMISSION_SPEED_FACTOR                         = 18;
-  const uint64_t GENESIS_BLOCK_REWARD                          = 50000000000000000;
+  const uint64_t GENESIS_BLOCK_REWARD                          = 60000000000000000;
   static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
-  const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 0.1;
+  const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 10000000000000;
   const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
   const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
   const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
-  const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 6;
+  const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
   // COIN - number of smallest units in one coin
   const uint64_t POINT                                         = UINT64_C(1000);        // pow(10, 3)
-  const uint64_t COIN                                          = UINT64_C(1000000);     // pow(10, 6)
+  const uint64_t COIN                                          = UINT64_C(100000000);     // pow(10, 6)
   const uint64_t MINIMUM_FEE                                   = UINT64_C(100);        // pow(10, 3)
   const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(10);         // pow(10, 2)
   // Use 0 for default max transaction size limit
   const uint64_t MAX_TRANSACTION_SIZE_LIMIT                    = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE * 125 / 100 - CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE;
   const uint64_t DEFAULT_FEE                                   = MINIMUM_FEE;
 
-  const uint64_t DIFFICULTY_TARGET                             = 320; // seconds
+  const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
   const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
   const size_t   DIFFICULTY_WINDOW                             = 50; // blocks
   const size_t   DIFFICULTY_CUT                                = 5;  // timestamps to cut after sorting
@@ -110,7 +110,7 @@ namespace parameters {
 
 
 const char     CRYPTONOTE_NAME[]                             = "MedicalCoin";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "MDCL";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 const uint32_t GENESIS_NONCE                                 = 70;
 const uint64_t GENESIS_TIMESTAMP                             = 1515479625;
 
